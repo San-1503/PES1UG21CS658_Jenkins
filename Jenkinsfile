@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Compile the .cpp file
-                    sh 'g++ -o test hello.cpp'
+                    sh 'g++ -o main/test main/hello.cpp'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Print output of .cpp file
-                    sh './test'
+                    sh './main/test'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Deploy the executable to a directory (example)
                     sh 'mkdir -p deploy_directory'
-                    sh 'test deploy_directory/'
+                    sh 'amain/test deploy_directory/'
                 }
             }
         }
