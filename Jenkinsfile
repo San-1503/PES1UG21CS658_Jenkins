@@ -25,7 +25,7 @@ pipeline {
                 script {
                     // Deploy the executable to a directory (example)
                     sh 'mkdir -p deploy_directory'
-                    sh 'amain/test deploy_directory/'
+                    sh 'main/test deploy_directory/'
                 }
             }
         }
